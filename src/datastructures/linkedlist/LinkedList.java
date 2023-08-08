@@ -56,5 +56,27 @@ public class LinkedList {
     public void getLength() {
         System.out.println("Length: " + length);
     }
+    
+    public void append(int value) {
+    	
+    	if(length == 0) {
+    		head = new Node(value);
+    		tail = head;
+    	}
+    	else {
+    	tail.next = new Node(value);
+    	
+    	tail = tail.next;
+    	}
+    	
+    	length++;
+    	
+    }
+    
+    public void makeEmpty() {
+    	head = null;
+    	tail = null;
+    	length = 0;
+    }
 
 }
